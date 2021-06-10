@@ -9,8 +9,7 @@ function initMap() {
   const localContextMapView = new google.maps.localContext.LocalContextMapView({
     element: document.getElementById("map"),
     placeTypePreferences: [
-      { type: "restaurant" },
-      { type: "tourist_attraction" },
+      { type: "bar" },
     ],
     maxPlaceCount: 12,
   });
