@@ -9,16 +9,19 @@ function initMap() {
   const localContextMapView = new google.maps.localContext.LocalContextMapView({
     element: document.getElementById("map"),
     placeTypePreferences: [
-      { type: "bar" },
+      { type: "bar", weight: 5 },
+      { type: "restaurant", weight: 1},
     ],
     maxPlaceCount: 12,
   });
+
+  
   map = localContextMapView.map;
   map.setOptions({
     center: { lat: 36.15470, lng: -86.78616 },
     zoom: 14,
   });
-
+  
   infoWindow = new google.maps.InfoWindow();
 
 //   // const locationButton = document.createElement("button");
